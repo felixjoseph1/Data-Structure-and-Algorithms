@@ -5,8 +5,8 @@ import java.util.ArrayList;
 //find all subseq of str
 public class SubSeq {
     public static void main(String[] args) {
-        findSubSeq("","abc");
-        //System.out.println( findSubSeqReturnList("","abc"));
+        //findSubSeq("","abc");
+        System.out.println( findSubSeqReturnList("","abc"));
     }
     //p-> processed str, up-> un processed str
     public static void findSubSeq(String p,String up){

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class DiceSum {
     public static void main(String[] args) {
-        //Dice("",4);
-        System.out.println(DiceList("",4));
+        Dice("",4);
+        //System.out.println(DiceList("",4));
     }
     public static void Dice(String p,int target){
         if(target==0){

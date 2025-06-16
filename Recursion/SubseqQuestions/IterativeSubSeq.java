@@ -2,10 +2,10 @@ package Recursion.SubseqQuestions;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-
+//print without duplicate subsets in iterative
 public class IterativeSubSeq {
     public static void main(String[] args) {
-        //System.out.println(ItrSubSeq(new int[]{1,2,3}));
+        //System.out.println(ItrSubSeq(new int[]{1,2,3})); //with duplicates
         System.out.println(ItrDupliSubSeq(new int[]{1,2,2})); //print without duplicate subsets
 
     }

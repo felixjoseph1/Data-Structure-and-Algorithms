@@ -12,7 +12,7 @@ public class NQueens {
             return 1;
         }
         int count=0;
-        for(int col=0;col<board.length;col++){
+        for(int col=0;col<board[0].length;col++){
             if(isSafe(board,row,col)){
                 board[row][col]=true;
                 count+=nqueens(board,row+1);
