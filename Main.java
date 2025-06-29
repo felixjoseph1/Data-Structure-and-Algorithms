@@ -1,15 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import java.util.Stack;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+class Solution {
+    public String decodeString(String s) {
+        Stack<StringBuilder> str_stack =new Stack<>();
+        Stack<Integer> num_stack=new Stack<>();
+        int curr_num=0;
+        StringBuilder curr_str=new StringBuilder();
+        for(char ch:s.toCharArray()){
+            if(Character.isDigit(ch)){
+                curr_num=curr_num*10+(ch-'0');
+            }
+            else if (ch=='[') {
+                num_stack.push(curr_num);
+                str_stack.push(curr_str);
+                curr_num=0;
+                curr_str=new StringBuilder();
+            }
+            else if (ch==']') {
+                int popped_num=num_stack.pop();
+                StringBuilder popped_str= str_stack.pop();
+                StringBuilder repeated =new StringBuilder();
+                for(int i=0;i<popped_num;i++){
+                    repeated.append(curr_str);
+                }
+                popped_str.append(repeated);
+                curr_str=popped_str;
+            }
+            else{
+                curr_str.append(ch);
+            }
         }
+        return curr_str.toString();
     }
 }
