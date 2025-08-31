@@ -29,4 +29,28 @@ public class QuickSort {
         sort(arr,low,end);
         sort(arr,start,high);
     }
+//    public static void sort(int []arr,int low,int high){
+//        if(low>=high) return;
+//        int swapMarker=low;
+//        int pivot=arr[high];
+//        int curr_index=low;
+//        while(curr_index<=high){
+//            if(arr[curr_index]<pivot) {
+//                curr_index++;
+//            }
+//            else{
+//                swapMarker++;
+//                if(arr[curr_index]>arr[swapMarker]){
+//                    int temp=arr[curr_index];
+//                    arr[curr_index]=arr[swapMarker];
+//                    arr[swapMarker]=temp;
+//                }
+//                else{
+//                    curr_index++;
+//                }
+//            }
+//        }
+//        sort(arr,low,swapMarker);
+//        sort(arr,swapMarker,high);
+//    }
 }

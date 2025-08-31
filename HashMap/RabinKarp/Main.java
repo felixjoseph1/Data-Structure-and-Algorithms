@@ -1,4 +1,8 @@
 package HashMap.RabinKarp;
 
-public class Main {
+class Main {
+    public static void main(String[] args) {
+        RabinKarp algo = new RabinKarp();
+        algo.search("JosFelixJoseph", "Felix");
+    }
 }

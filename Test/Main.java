@@ -50,7 +50,7 @@ class Solution {
             // Reinsert servers that are free by current time
             for (int j = 0; j < n; j++) {
                 Server server = pq.poll();
-                if (server.freeTime <= i) server.freeTime = 0;
+                if (server.freeTime == i) server.freeTime = 0;
                 pq.add(server);
             }
 
